@@ -1,0 +1,594 @@
+$color1 : #fff; // white
+$color2 : #f8f9f7;// lightest grey;
+$color3 : #e9e9e8; // lightGrey (html background)
+$color4 : #a7a5a5; // medium grey (text)
+$color5 : #656665;
+$accentColor : #ff541e;
+$accentColor2 : #bc3d14; // Accent color
+$color6 : #333; // darkest color
+
+
+.accentColorText {
+  color: $accentColor;
+}
+
+.accentColor2Text {
+  color: $accentColor2;
+}
+
+
+html {
+  background-color: $color3;
+  // padding: 0;
+  width: 100%;
+}
+
+html * {
+  font-family: 'Exo', sans-serif;
+}
+
+.columns {
+  // border: 1px solid red;
+}
+
+header {
+  box-sizing: border-box;
+  height: 100px;
+  background-color: $color1;
+  border-bottom: 2px solid $color4;
+  padding: 0;
+}
+
+.headerPlaceholder {
+  height: 100px;
+  width: 100%;
+  display: none;
+}
+
+// ----------------------------------------------------------------------------
+// HEADER TOP
+// ----------------------------------------------------------------------------
+.headerTop {
+  position: relative;
+  // box-sizing: border-box;
+  // padding: 10px;
+  height: 45px;
+  background-color: $color6;
+  color: $color4;
+  width: 100%;
+
+  p {
+    padding: 10px 0 0 30px;
+  }
+
+  .socialIcons {
+    text-align: right;
+    font-size: 20px;
+    padding: 10px 30px 0 0;
+
+    a {
+      color: $color4;
+      margin-right: 10px;
+    }
+
+  }
+
+}
+
+// ----------------------------------------------------------------------------
+// HEADER BOTTOM
+// ----------------------------------------------------------------------------
+.headerBottom {
+  height: 98px;
+  background-color: $color1;
+  width: 100%;
+  padding: 0;
+
+  .logoBox {
+    // position: relative;
+    height: 98px;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 80px;
+    }
+
+  }
+
+}
+
+// #headerPlaceholder {
+//     height:145px;
+//     width:100%;
+//     display:none;
+// }
+
+
+nav.navbar {
+  text-align: right;
+  padding: 0;
+  margin: 0;
+
+  ul {
+    height: 100px;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      margin: 0 25px 0 25px;
+      height: 100px;
+      padding-top: 40px;
+
+      a {
+        color: $color6;
+        letter-spacing: .5px;
+        display: inline-block;
+        text-decoration: none;
+        height: 60px;
+        padding: 5px;
+      }
+
+    }
+  }
+}
+
+// .stickyHeader {
+//   position: fixed;
+//   top: 0px;
+//   z-index: 20;
+// }
+
+
+.navbar ul li a:hover {
+  color: $accentColor;
+  border-bottom: 4px solid $accentColor;
+}
+
+// ----------------------------------------------------------------------------
+// HEAD BANNER CAROUSEL
+// ----------------------------------------------------------------------------
+#headBanner {
+  // width: 100%;
+  height: 500px;
+  padding: 0;
+  // overflow: hidden;
+
+  .carousel-indicators li {
+    border: 1px solid $accentColor;
+
+  }
+
+  .carousel-indicators .active {
+    background-color: $accentColor;
+  }
+
+  #carousel-example-generic {
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+
+
+    .carousel-inner {
+      // display: table-cell;
+      .item {
+        height: 500px;
+        // position: relative;
+
+        img {
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+        }
+      }
+
+    }
+
+  }
+
+}
+
+.quietHeadline {
+  color: $color4;
+}
+
+.loudHeadline {
+  color: $color5;
+}
+
+// ----------------------------------------------------------------------------
+// SECTION 2
+// ----------------------------------------------------------------------------
+.sectionFullHeader {
+  height: 650px;
+  padding: 30px;
+
+  // background-color: $color3;
+}
+
+.one {
+  background-color: $color3;
+
+  .quietHeadline {
+    color: $color4;
+  }
+
+  .loudHeadline {
+    color: $color5;
+  }
+
+}
+
+.row {
+  // border: 1px solid black;
+}
+
+.cardRow {
+  margin-top: 10px;
+  height: 300px;
+
+
+  .cardOuter {
+    padding: 30px;
+
+    .cardContents {
+      position: relative;
+      overflow: hidden;
+      height: 300px;
+      width: 100%;
+
+
+      .cardFront, .cardBack {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transition: -webkit-transform 0.5s;
+        transition: transform 0.5s;
+
+        .inner {
+          // display: inline-block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+          width: 100%;
+          padding: 5px;
+          text-align: center;
+            color: $color5;
+          line-height: 2;
+
+          h2 {
+            margin-top: 15px;
+          }
+
+          h2 i {
+            font-size: 200%;
+            color: $accentColor;
+          }
+
+          p {
+            margin-top: 15px;
+
+          }
+
+        }
+      }
+
+      .cardFront {
+        background-color: $color1;
+      }
+
+      .cardBack {
+        background-color: $accentColor;
+        border: 5px solid $accentColor2;
+        -webkit-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
+        * {
+          color: $color1;
+        }
+        .inner {
+            padding-top: 5px;
+
+            h2 {
+              margin-top: 20px;
+            }
+        }
+
+
+          a {
+            margin-top: 20px;
+            width: 50%;
+            margin-left: 25%;
+            height: auto;
+            background-color: transparent;
+            border: 2px solid $color1;
+            // display: inline-block;
+            padding: 0;
+            display: block;
+            // text-decoration: none;
+          }
+      }
+
+    }
+  }
+}
+
+div.card.effectHover {
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card.effectHover:hover .cardFront {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card.effectHover:hover .cardBack {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+.buttonDiv {
+  margin-top: 30px;
+
+    a.accentButton {
+      width: 100%;
+      border: 2px solid $color5;
+      background-color: $accentColor;
+      color: $color1;
+      font-size: 20px;
+      outline: none;
+      padding: 10px;
+      display: block;
+      text-align: center;
+    }
+
+    a.accentButton:hover,
+    a.accentButton:active {
+      background-color: $accentColor2;
+      color: $color3;
+      outline: none;
+      text-decoration: none;
+    }
+}
+
+
+
+// -----------------------------------------------------------------------------
+// SECTION 3
+.two {
+  height: 500px;
+  padding: 0;
+  // background-color: $color5;
+
+  .left40 {
+    // border-right: 1px solid $accentColor2;
+    height: 100%;
+    background-image: url("https://images.unsplash.com/photo-1507034589631-9433cc6bc453?auto=format&fit=crop&w=631&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+    background-size:cover;
+    background-position: center;
+  }
+
+  .right60 {
+    position: relative;
+    height: 100%;
+    background-color: $color2;
+
+    .jumboHeader {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 25%;
+      width: 100%;
+      padding: 10px;
+
+      h3 {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        margin-top: 20px;
+        text-align: center;
+        color: $color5;
+      }
+    }
+    .jumboBox {
+      height: 75%;
+      position: absolute;
+      top: 25%;
+      width: 100%;
+      padding: 20px;
+      // border: 1px solid $accentColor;
+      #first {
+        border-right: 2px solid $accentColor;
+      }
+
+      .posterParent {
+        height: 100%;
+        // border-bottom : 2px solid $accentColor;
+
+
+
+        .poster {
+          height: 100%;
+          padding: 10px;
+          text-align: center;
+          color: $color5;
+
+        }
+      }
+
+
+    }
+
+
+
+
+  }
+
+}
+
+#first {
+  border-right: 2px solid $accentColor;
+}
+
+.three {
+  padding: 0;
+  // border-top: 1px solid $accentColor2;
+  // border-bottom: 1px solid $accentColor2;
+  height: 500px;
+
+
+
+
+  .left60 {
+    // border-right: 1px solid $accentColor2;
+    height: 100%;
+  }
+
+  .right40 {
+    height: 100%;
+    // background-color: $color2;
+
+  }
+}
+
+// -----------------------------------------------------------------------------
+// WHAT DO WE DO?
+
+
+// -----------------------------------------------------------------------------
+// BANNER BREAK
+.bannerContainer {
+    padding: 0;
+    position: relative;
+    height: 250px;
+    background-image : url("https://images.unsplash.com/photo-1435253325575-18dd01bad23a?auto=format&fit=crop&w=1050&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.banHead1{
+  margin: 0;
+  text-align: left;
+  height: 125px;
+  padding: 30px;
+  color: $color1;
+}
+
+
+.banHead2 h1 {
+  margin: 0;
+    text-align: right;
+    height: 125px;
+    padding: 30px;
+    color: $color1;
+}
+
+.four {
+  padding: 0;
+  // border-top: 1px solid $accentColor2;
+  height: 400px;
+
+
+  .halfLeft {
+    // border-right: 1px solid $accentColor2;
+    background-color: $color1;
+    height: 100%;
+  }
+
+  .halfRight {
+    height: 100%;
+    background-color: $color2;
+  }
+}
+
+//
+
+.five {
+  padding: 0;
+  // border-top: 1px solid $accentColor2;
+  height: 400px;
+
+
+  .halfLeft {
+    // border-right: 1px solid $accentColor2;
+    background-color: $color2;
+    height: 100%;
+  }
+
+  .halfRight {
+    height: 100%;
+    background-color: $color1;
+  }
+}
+
+
+.bannerBox {
+    height: 400px;
+    text-align: center;
+    padding: 40px;
+
+    h1 {
+      color: $color5;
+    }
+}
+
+
+#testimonialSlideShow {
+
+  margin-top: 30px;
+  position: relative;
+
+  p {
+    font-size: 15px;
+    color: $color5;
+  }
+
+  i {
+    font-size: 18px;
+    color: $color5;
+  }
+
+  i.fa-quote-left {
+    margin-right: 20px;
+    // font-size: 20px;
+  }
+  i.fa-quote-right {
+    margin-left: 20px;
+    // font-size: 20px;
+  }
+}
+
+#testimonialSlideShow > div {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  width: 100%;
+}
+
+
+footer {
+  height: 250px;
+  background-color: $color6;
+}
+
+//
