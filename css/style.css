@@ -379,9 +379,9 @@ div.card.effectHover {
 }
 
 .bannerContainer {
-  padding: 50px;
+  padding: 100px;
   position: relative;
-  height: 300px;
+  height: 400px;
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: center;
@@ -607,8 +607,110 @@ div.card.effectHover {
 }
 
 footer {
-  height: 250px;
+  position: relative;
+  padding-top: 15px;
+  height: 400px;
   background-color: #333;
+}
+footer .footerTop {
+  width: 100%;
+  height: 70px;
+  color: #e9e9e8;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+footer .footerTop .info {
+  padding: 10px 5px 5px 30px;
+  height: 100%;
+}
+footer .footerTop .info p {
+  color: #a7a5a5;
+}
+footer .footerTop .footerSocial {
+  text-align: right;
+  height: 100%;
+  padding: 15px;
+  background-color: transparent;
+}
+footer .footerTop .footerSocial a {
+  height: 100%;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 30px;
+  color: #a7a5a5;
+}
+footer .footerTop .footerSocial a:hover {
+  color: #ff541e;
+}
+footer .footerContact {
+  height: 315px;
+  text-align: left;
+  padding: 20px;
+  background-color: transparent;
+}
+footer .footerContact form {
+  display: inline;
+}
+footer .footerContact .tight {
+  margin-top: 10px;
+  width: 100%;
+  padding: 0;
+}
+footer .footerContact .tight label {
+  color: #e9e9e8;
+  letter-spacing: 1px;
+  font-size: 85%;
+}
+footer .footerContact h4 {
+  color: #bc3d14;
+  margin-bottom: 0;
+}
+footer .footerContact button {
+  padding: 5px 10px 5px 10px;
+}
+footer #newsletter {
+  width: 70%;
+}
+footer .footerNav {
+  height: 315px;
+  padding-top: 20px;
+}
+footer .footerNav nav h4 {
+  padding: 0 0 5px 20px;
+  color: #e9e9e8;
+}
+footer .footerNav nav ul {
+  padding: 20px;
+  padding-top: 0;
+}
+footer .footerNav nav ul li {
+  text-align: left;
+  line-height: 1.8;
+  color: #a7a5a5;
+  list-style-type: none;
+}
+footer .footerNav nav ul li:hover {
+  color: #bc3d14;
+  cursor: pointer;
+}
+footer .footerMission {
+  height: 315px;
+  width: 100%;
+  padding: 10px;
+}
+footer .footerMission h3 {
+  text-align: left;
+  color: #bc3d14;
+}
+footer .footerMission p {
+  color: #a7a5a5;
+}
+
+.legal {
+  color: #a7a5a5;
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
