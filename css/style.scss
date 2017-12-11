@@ -5,6 +5,7 @@ $color4 : #a7a5a5; // medium grey (text)
 $color5 : #656665;
 $accentColor : #ff541e;
 $accentColor2 : #bc3d14; // Accent color
+$accentColorFilter : rgba(255, 83, 31, 0.8);
 $color6 : #333; // darkest color
 
 
@@ -31,6 +32,8 @@ html * {
   // border: 1px solid red;
 }
 
+
+
 header {
   box-sizing: border-box;
   height: 100px;
@@ -50,8 +53,6 @@ header {
 // ----------------------------------------------------------------------------
 .headerTop {
   position: relative;
-  // box-sizing: border-box;
-  // padding: 10px;
   height: 45px;
   background-color: $color6;
   color: $color4;
@@ -85,7 +86,6 @@ header {
   padding: 0;
 
   .logoBox {
-    // position: relative;
     height: 98px;
 
     img {
@@ -99,13 +99,6 @@ header {
   }
 
 }
-
-// #headerPlaceholder {
-//     height:145px;
-//     width:100%;
-//     display:none;
-// }
-
 
 nav.navbar {
   text-align: right;
@@ -138,12 +131,6 @@ nav.navbar {
   }
 }
 
-// .stickyHeader {
-//   position: fixed;
-//   top: 0px;
-//   z-index: 20;
-// }
-
 
 .navbar ul li a:hover {
   color: $accentColor;
@@ -154,10 +141,8 @@ nav.navbar {
 // HEAD BANNER CAROUSEL
 // ----------------------------------------------------------------------------
 #headBanner {
-  // width: 100%;
   height: 500px;
   padding: 0;
-  // overflow: hidden;
 
   .carousel-indicators li {
     border: 1px solid $accentColor;
@@ -175,10 +160,9 @@ nav.navbar {
 
 
     .carousel-inner {
-      // display: table-cell;
+
       .item {
         height: 500px;
-        // position: relative;
 
         img {
           width: 100%;
@@ -208,7 +192,6 @@ nav.navbar {
   height: 650px;
   padding: 30px;
 
-  // background-color: $color3;
 }
 
 .one {
@@ -256,7 +239,6 @@ nav.navbar {
         transition: transform 0.5s;
 
         .inner {
-          // display: inline-block;
           position: absolute;
           top: 0;
           right: 0;
@@ -312,10 +294,8 @@ nav.navbar {
             height: auto;
             background-color: transparent;
             border: 2px solid $color1;
-            // display: inline-block;
             padding: 0;
             display: block;
-            // text-decoration: none;
           }
       }
 
@@ -355,14 +335,22 @@ div.card.effectHover {
       padding: 10px;
       display: block;
       text-align: center;
+      -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+      -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+      box-sizing: border-box;
     }
 
     a.accentButton:hover,
     a.accentButton:active {
-      background-color: $accentColor2;
-      color: $color3;
+      -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+      -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+      box-sizing: border-box;
+      // background-color: $accentColor2;
+      color: $color1;
       outline: none;
-      text-decoration: none;
+      text-decoration: underline;
+      border: 4px solid $accentColor2;
+      padding: 8px;
     }
 }
 
@@ -373,10 +361,8 @@ div.card.effectHover {
 .two {
   height: 500px;
   padding: 0;
-  // background-color: $color5;
 
   .left40 {
-    // border-right: 1px solid $accentColor2;
     height: 100%;
     background-image: url("https://images.unsplash.com/photo-1507034589631-9433cc6bc453?auto=format&fit=crop&w=631&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
     background-size:cover;
@@ -416,9 +402,6 @@ div.card.effectHover {
 
       .posterParent {
         height: 100%;
-        // border-bottom : 2px solid $accentColor;
-
-
 
         .poster {
           height: 100%;
@@ -445,26 +428,17 @@ div.card.effectHover {
 
 .three {
   padding: 0;
-  // border-top: 1px solid $accentColor2;
-  // border-bottom: 1px solid $accentColor2;
   height: 600px;
 
 
-
-
   .left60 {
-    // border-right: 1px solid $accentColor2;
-    // overflow-y: auto;
     padding-top: 30px;
     position: relative;
     text-align: center;
     height: 100%;
     background-color: $color3;
+
     .headline {
-      // padding-top: 20px;
-      // position: absolute;
-      // top: 0;
-      // left: 0;
       width: 100%;
       height: 20%;
       h3 {
@@ -474,11 +448,7 @@ div.card.effectHover {
 
     .accordion {
       overflow-y: auto;
-      // position: relative;
-      // top: 25%;
-      // left: 0;
       width: 100%;
-      // height: 75%;
       padding-top: 20px;
 
       .panel {
@@ -508,7 +478,7 @@ div.card.effectHover {
     }
 
     a:hover {
-        color: $accentColor;
+        // color: $accentColor;
     }
 
     .tightTop {
@@ -538,15 +508,12 @@ div.card.effectHover {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    // border-top: 2px solid $accentColor;
-    // border-bottom: 2px solid $accentColor;
 }
 
 .banHead1{
   margin: 0;
   text-align: left;
   height: 125px;
-  // padding: 30px;
   color: $color5;
 }
 
@@ -559,29 +526,143 @@ div.card.effectHover {
   color: $color5;
 }
 
+
+
 .four {
-  padding: 0;
-  // border-top: 1px solid $accentColor2;
-  height: 550px;
-  background-color: $color5;
+  padding: 50px;
+  height: auto;
+  background-color: $color3;
 
-  .third {
-    height: 100%;
+  .headRow {
+    // padding-top: 20px;
+    padding: 20px;
+    padding-top: 0;
+    width: 100%;
+    // max-height: 100px;
+    text-align: center;
 
+    h3 {
+      margin-top: 0;
+    }
+  }
+
+  .fourBody {
+    // padding: 20px;
+    height: 625px;
+
+    .third {
+      height: 500px;
+      padding: 15px;
+      color: $color5;
+      background-color: transparent;
+      transition: padding .3s;
+      -webkit-transition: padding .3s;
+      -moz-transition: padding .3s;
+
+      // transition: background-color .2s;
+
+      #thirdInner {
+        height: 100%;
+        background-color: $color1;
+        overflow: hidden;
+        text-align: center;
+        position: inline-block;
+
+        div.imgLeft {
+          height: 45%;
+          min-width: 100%;
+          position: relative;
+          // display: inline-block;
+          overflow: hidden;
+
+          img {
+            min-height: 100%;
+            max-width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            // z-index: 0;
+          }
+        }
+
+        .snipContent {
+
+          height: 55%;
+          padding: 10px;
+
+          p.quiet {
+            // margin-top: 10px;
+            color: $color4;
+          }
+          .date {
+            margin-left: 20px;
+
+          }
+          h3 {
+            color: $color5;
+            margin-top: 10px;
+            margin-bottom: 20px;
+          }
+
+          p.reg {
+            padding-bottom: 20px;
+          }
+
+          .lightLine {
+            height: 0;
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+            border: 1px solid $color3;
+            // margin-top: 20px;
+          }
+
+          .blogButton {
+            display: block;
+            padding: 10px;
+            border: 1px solid $accentColor;
+            width: 60%;
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translatex(-50%);
+            color: $accentColor2;
+            font-size: 125%;
+            box-sizing: border-box;
+          }
+
+          .blogButton:hover {
+            background-color: $accentColor;
+            border: 3px solid $accentColor2;
+            color: $color1;
+          }
+
+        }
+      }
+    }
+
+    .third:hover {
+      cursor:  pointer;
+      padding: 5px;
+      // background-color: $accentColorFilter;
+      // color: $accentColor2;
+      border-radius: 2px;
+    }
   }
 }
 
-//
 
-.five {
+.blogSnipTitle{
+  color: $color5;
+  width: 100%;
+  display:block;
   padding: 0;
-  // border-top: 1px solid $accentColor2;
-  height: 500px;
-  background-image: url("https://images.unsplash.com/photo-1496862831786-3fdc3d8747be?auto=format&fit=crop&w=1050&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
-  background-position: bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
-
+  transition: color .2s;
+}
+.blogSnipTitle:hover {
+  text-decoration: none;
+  color: $accentColor;
 }
 
 
@@ -601,7 +682,6 @@ div.card.effectHover {
   margin-top: 50px;
 
   p {
-    // margin-top: 20px;
     font-size: 15px;
     color: $color5;
   }
@@ -613,11 +693,9 @@ div.card.effectHover {
 
   i.fa-quote-left {
     margin-right: 20px;
-    // font-size: 20px;
   }
   i.fa-quote-right {
     margin-left: 20px;
-    // font-size: 20px;
   }
 }
 
@@ -628,6 +706,92 @@ div.card.effectHover {
   right: 10px;
   bottom: 10px;
   width: 100%;
+}
+
+
+// -----------------------------------------------------------------------------
+
+.five {
+  padding: 0;
+  height: 650px;
+
+  .left50 {
+    height: 100%;
+    background-image: url("https://images.unsplash.com/photo-1494783367193-149034c05e8f?auto=format&fit=crop&w=1050&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .right50 {
+    padding: 30px;
+    h3,
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      padding: 30px;
+
+      textarea {
+        resize: none;
+      }
+
+      // button {
+      //   margin-top: 30px;
+      //   width: 30%;
+      //   color: $color6;
+      //   border: 2px solid $accentColor;
+      //   border-radius: none;
+      // }
+      //
+      // button:hover {
+      //   background-color: $accentColor;
+      //   border: 2px solid $accentColor2;
+      //   color: $color1;
+      //   text-decoration: underline;
+      // }
+
+      button.accentButton {
+        width: 40%;
+        margin-left: 60%;
+        border: 2px solid $color5;
+        background-color: $accentColor;
+        color: $color1;
+        font-size: 20px;
+        outline: none;
+        margin-top: 30px;
+        padding: 5px;
+        display: block;
+        text-align: center;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;
+        border-radius: 0;
+      }
+
+      button.accentButton:hover,
+      button.accentButton:active {
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;
+        // background-color: $accentColor2;
+        color: $color1;
+        outline: none;
+        text-decoration: underline;
+        border: 4px solid $accentColor2;
+        padding: 3px;
+        border-radius: 0;
+      }
+
+
+    }
+
+
+  }
+
+
+
 }
 
 
