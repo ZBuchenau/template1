@@ -22,14 +22,21 @@ html {
   background-color: $color3;
   // padding: 0;
   width: 100%;
+
 }
 
 html * {
-  font-family: 'Exo', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  text-shadow: none;
 }
 
 .columns {
   // border: 1px solid red;
+}
+
+h1 {
+  color: $color5;
 }
 
 
@@ -57,6 +64,7 @@ header {
   background-color: $color6;
   color: $color4;
   width: 100%;
+  // padding: 20px;
 
   p {
     padding: 10px 0 0 30px;
@@ -64,12 +72,18 @@ header {
 
   .socialIcons {
     text-align: right;
-    font-size: 20px;
-    padding: 10px 30px 0 0;
+    font-size: 30px;
+    padding: 2.5px;
+    padding-right: 40px;
+    height: 100%;
 
     a {
       color: $color4;
       margin-right: 10px;
+    }
+
+    a:hover {
+      color: $accentColor;
     }
 
   }
@@ -125,6 +139,7 @@ nav.navbar {
         text-decoration: none;
         height: 60px;
         padding: 5px;
+        font-weight: 400;
       }
 
     }
@@ -160,14 +175,94 @@ nav.navbar {
 
 
     .carousel-inner {
+      position: relative;
 
       .item {
         height: 500px;
+
 
         img {
           width: 100%;
           position: absolute;
           bottom: 0;
+        }
+
+        .carousel-caption {
+          position: relative;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          // left: 40px;
+          // padding: 0;
+          // padding-left: 40px;
+
+          .captionBox {
+
+            h1 {
+              padding: 20px;
+              font-weight: 400;
+              color: $accentColor;
+            }
+
+            p {
+              font-weight: 300;
+              font-size: 19px;
+              line-height: 1.5;
+              color: $color2;
+              letter-spacing: .75px;
+            }
+
+            .buttonDiv {
+              a.accentButton {
+                border: 2px solid $accentColor;
+                text-decoration: none;
+                border-radius: 2px;
+              }
+              a.accentButton:hover {
+                border: 2px solid $color2;
+                // background-color: $accentColor2;
+                padding: 10px;
+                text-decoration: none;
+                font-weight: 300;
+                color: $color2;
+
+              }
+            }
+          }
+
+          .left {
+            position: absolute;
+            top: 40%;
+            left: 30%;
+            height: 50%;
+            width: 50%;
+            transform: translate(-50%, -50%);
+
+          }
+
+          .right {
+            padding: 0;
+            position: absolute;
+            top: 40%;
+            left: 70%;
+            height: 50%;
+            width: 50%;
+            transform: translate(-50%, -50%);
+            .buttonDiv a:hover {
+              // width: 60%;
+            }
+          }
+
+          .middle {
+            padding: 0;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            height: 50%;
+            width: 50%;
+            transform: translate(-50%, -50%);
+          }
         }
       }
 
@@ -323,7 +418,7 @@ div.card.effectHover {
 }
 
 .buttonDiv {
-  margin-top: 30px;
+  margin-top: 35px;
 
     a.accentButton {
       width: 100%;
@@ -518,11 +613,12 @@ div.card.effectHover {
     // background-size: cover;
 }
 
-.banHead1{
+.banHead1 h1{
   margin: 0;
   text-align: left;
   height: 125px;
   color: $color4;
+
 }
 
 
@@ -552,11 +648,15 @@ div.card.effectHover {
     h3 {
       margin-top: 0;
     }
+
+    // h1 {
+    //   color: $color5;
+    // }
   }
 
   .fourBody {
     // padding: 20px;
-    height: 625px;
+    height: 600px;
 
     .third {
       height: 500px;
@@ -600,13 +700,13 @@ div.card.effectHover {
           padding: 10px;
 
           p.quiet {
-            // margin-top: 10px;
             color: $color4;
           }
+
           .date {
             margin-left: 20px;
-
           }
+
           h3 {
             color: $color5;
             margin-top: 10px;
@@ -623,7 +723,6 @@ div.card.effectHover {
             margin-left: 5%;
             margin-right: 5%;
             border: 1px solid $color3;
-            // margin-top: 20px;
           }
 
           .blogButton {
@@ -632,7 +731,7 @@ div.card.effectHover {
             border: 1px solid $accentColor;
             width: 60%;
             position: absolute;
-            bottom: 25px;
+            bottom: 20px;
             left: 50%;
             transform: translatex(-50%);
             color: $accentColor2;
@@ -818,7 +917,7 @@ footer {
     height: 70px;
     // padding: 10px;
     color: $color3;
-    background-color: rgba(255, 255, 255, .1);
+    background-color: rgba(255, 255, 255, .06);
 
     .info {
       padding: 10px 5px 5px 30px;
