@@ -20,9 +20,6 @@ $color6 : #333; // darkest color
 
 html {
   background-color: $color3;
-  // padding: 0;
-  width: 100%;
-
 }
 
 html * {
@@ -47,6 +44,7 @@ header {
   background-color: $color1;
   border-bottom: 2px solid $color4;
   padding: 0;
+
 }
 
 .headerPlaceholder {
@@ -98,6 +96,7 @@ header {
   background-color: $color1;
   width: 100%;
   padding: 0;
+  z-index: 1000;
 
   .logoBox {
     height: 98px;
@@ -118,6 +117,7 @@ nav.navbar {
   text-align: right;
   padding: 0;
   margin: 0;
+  z-index: 1000;
 
   ul {
     height: 100px;
@@ -128,7 +128,7 @@ nav.navbar {
 
     li {
       display: inline-block;
-      margin: 0 25px 0 25px;
+      margin: 0 20px 0 20px;
       height: 100px;
       padding-top: 40px;
 
@@ -194,7 +194,7 @@ nav.navbar {
           top: 0;
           left: 0;
           // left: 40px;
-          // padding: 0;
+          // padding: 20px;
           // padding-left: 40px;
 
           .captionBox {
@@ -235,23 +235,21 @@ nav.navbar {
             position: absolute;
             top: 40%;
             left: 30%;
-            height: 50%;
-            width: 50%;
+            // height: 50%;
+            width: 60%;
             transform: translate(-50%, -50%);
+            padding: 20px;
 
           }
 
           .right {
-            padding: 0;
+            padding: 20px;
             position: absolute;
             top: 40%;
             left: 70%;
-            height: 50%;
-            width: 50%;
+            // height: 50%;
+            width: 60%;
             transform: translate(-50%, -50%);
-            .buttonDiv a:hover {
-              // width: 60%;
-            }
           }
 
           .middle {
@@ -259,8 +257,8 @@ nav.navbar {
             position: absolute;
             top: 40%;
             left: 50%;
-            height: 50%;
-            width: 50%;
+            // height: 50%;
+            width: 60%;
             transform: translate(-50%, -50%);
           }
         }
@@ -890,15 +888,8 @@ div.card.effectHover {
         padding: 3px;
         border-radius: 0;
       }
-
-
     }
-
-
   }
-
-
-
 }
 
 
@@ -1041,5 +1032,123 @@ footer {
   bottom: 10px;
   right: 30px;
 }
+
+
+
+//*****************************************************************************
+//*****************************************************************************
+// ABOUT US
+//*****************************************************************************
+//*****************************************************************************
+
+.funPhotoBanner {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  h1 {
+    font-size: 50px;
+    color: $color3;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    letter-spacing: 2px;
+    font-weight: 300;
+  }
+}
+
+.mission {
+  min-height: 350px;
+  width: 100%;
+  padding: 30px;
+  background-color: $color1;
+  text-align: center;
+
+  h1 {
+      color: $color5;
+  }
+
+  .missionStatement {
+    padding: 30px;
+  }
+}
+
+.team {
+  min-height: 500px;
+  width: 100%;
+  padding: 30px 0 30px 0;
+  text-align: center;
+  background-color: $color2;
+
+  .headline {
+    padding-bottom: 30px;
+  }
+
+  h3 {
+    color: $color6;
+    margin-top: 0
+  }
+  h4 {
+    color: $accentColor;
+  }
+
+  .teamHeader {
+    // background-color: $color1;
+    width: 100%;
+  }
+
+
+  .teamContainerLeft,
+  .teamContainerRight {
+    // background-color: $color1;
+    position: relative;
+    border-top: 1px solid $color3;
+    padding: 20px 50px 20px 50px;
+    height: 400px;
+    min-height: 350px;
+    width: 100%;
+
+    .imgBox {
+      padding: 20px;
+      // border: 1px solid red;
+      // min-height: 300px;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+
+
+      img {
+        height: auto;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .content {
+      height: 100%;
+      padding: 40px 40px 20px 40px;
+      color: $color5;
+      // padding: 0;
+      // width: 100%;
+      position:relative;
+    }
+  }
+}
+
 
 //
