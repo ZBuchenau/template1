@@ -778,8 +778,7 @@ footer .footerMission h3 {
 footer .footerMission p {
   color: #a7a5a5;
 }
-
-.legal {
+footer .legal {
   color: #a7a5a5;
   position: absolute;
   bottom: 10px;
@@ -801,14 +800,26 @@ footer .footerMission p {
   transform: translate(-50%, -50%);
 }
 .funPhotoBanner h1 {
-  font-size: 50px;
+  font-size: 60px;
   color: #e9e9e8;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  letter-spacing: 2px;
+  margin-top: 50px;
+  text-align: center;
+  font-weight: 300;
+}
+.funPhotoBanner .titleBtn {
+  text-align: center;
+  padding: 5px;
+}
+.funPhotoBanner .titleBtn a {
+  padding: 3px;
+  width: 80%;
+  margin-left: 10%;
+  border: 4px solid #ff541e;
+}
+.funPhotoBanner .titleBtn a:hover {
+  padding: 3px;
+  border: 4px solid #bc3d14;
+  text-decoration: none;
   font-weight: 300;
 }
 
@@ -835,13 +846,6 @@ footer .footerMission p {
 }
 .team .headline {
   padding-bottom: 30px;
-}
-.team h3 {
-  color: #333;
-  margin-top: 0;
-}
-.team h4 {
-  color: #ff541e;
 }
 .team .teamHeader {
   width: 100%;
@@ -874,9 +878,57 @@ footer .footerMission p {
 .team .teamContainerLeft .content,
 .team .teamContainerRight .content {
   height: 100%;
-  padding: 40px 40px 20px 40px;
+  padding: 60px 40px 20px 40px;
   color: #656665;
   position: relative;
+}
+.team .teamContainerLeft .content h3,
+.team .teamContainerRight .content h3 {
+  color: #656665;
+  margin-top: 0;
+}
+.team .teamContainerLeft .content h4,
+.team .teamContainerRight .content h4 {
+  color: #ff541e;
+}
+
+.gallery {
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+}
+.gallery h1 {
+  color: #656665;
+}
+
+#galleryWall {
+  padding: 5%;
+  padding-top: 2%;
+  margin-bottom: 100px;
+  text-align: center;
+  overflow: hidden;
+  /* Prevent vertical gaps */
+}
+#galleryWall .brick {
+  margin-top: 5px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+#galleryWall .brick .brickBox {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+}
+#galleryWall .brick .brickBox img {
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=style.css.map */
