@@ -905,10 +905,9 @@ footer .legal {
 #galleryWall {
   padding: 5%;
   padding-top: 2%;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   text-align: center;
   overflow: hidden;
-  /* Prevent vertical gaps */
 }
 #galleryWall .brick {
   margin-top: 5px;
