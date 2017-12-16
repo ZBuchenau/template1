@@ -945,15 +945,15 @@ footer .legal {
   font-weight: 300;
 }
 
-.contactForm {
+.contactRow .contactForm {
   min-height: 400px;
   padding: 20px 40px;
 }
-.contactForm h1 {
+.contactRow .contactForm h1 {
   width: 100%;
   text-align: center;
 }
-.contactForm form button.accentButton {
+.contactRow .contactForm form button.accentButton {
   width: 40%;
   margin-left: 60%;
   border: 2px solid #656665;
@@ -972,6 +972,28 @@ footer .legal {
   /* Firefox, other Gecko */
   box-sizing: border-box;
   border-radius: 0;
+}
+.contactRow .contactInfo {
+  padding: 40px;
+  height: auto;
+  position: relative;
+}
+.contactRow .contactInfo p {
+  text-align: left;
+  line-height: .75;
+  margin-bottom: 10px;
+}
+.contactRow .contactInfo .map {
+  height: auto;
+  width: 100%;
+}
+.contactRow .contactInfo .map a img {
+  height: auto;
+  width: 100%;
+  padding: 10px;
+}
+.contactRow .contactInfo .map a img:hover {
+  padding: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

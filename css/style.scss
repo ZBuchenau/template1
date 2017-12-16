@@ -1252,37 +1252,68 @@ footer {
   margin-top: 75px;
   font-weight: 300;
 }
+.contactRow {
+  .contactForm {
+    // border: 1px solid black;
+    // width: 100%;
+    min-height: 400px;
+    padding: 20px 40px;
 
-.contactForm {
-  // border: 1px solid black;
-  // width: 100%;
-  min-height: 400px;
-  padding: 20px 40px;
-
-  h1 {
-    width: 100%;
-    text-align: center;
-  }
-  form {
-    button.accentButton {
-      width: 40%;
-      margin-left: 60%;
-      border: 2px solid $color5;
-      background-color: $accentColor;
-      color: $color1;
-      font-size: 20px;
-      outline: none;
-      margin-top: 30px;
-      margin-bottom: 20px;
-      padding: 5px;
-      display: block;
+    h1 {
+      width: 100%;
       text-align: center;
-      -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-      -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-      box-sizing: border-box;
-      border-radius: 0;
+    }
+    form {
+      button.accentButton {
+        width: 40%;
+        margin-left: 60%;
+        border: 2px solid $color5;
+        background-color: $accentColor;
+        color: $color1;
+        font-size: 20px;
+        outline: none;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        padding: 5px;
+        display: block;
+        text-align: center;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;
+        border-radius: 0;
+      }
     }
   }
+
+  .contactInfo {
+    padding: 40px;
+    // width: 100%;
+    height: auto;
+    // background-color: green;
+    position: relative;
+
+      p {
+        text-align: left;
+        line-height: .75;
+        margin-bottom: 10px;  
+      }
+
+      .map {
+        height: auto;
+        width: 100%;
+        // background-color: yellow;
+
+        a img {
+          height: auto;
+          width: 100%;
+          padding: 10px;
+        }
+        a img:hover {
+          padding: 5px;
+        }
+      }
+  }
 }
+
 
 //
