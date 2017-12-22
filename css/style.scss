@@ -1,5 +1,5 @@
 $color1 : #fff; // white
-$color2 : #f8f9f7;// lightest grey;
+$color2 : #f8f9f7; // lightest grey;
 $color3 : #e9e9e8; // lightGrey (html background)
 $color4 : #a7a5a5; // medium grey (text)
 $color5 : #656665;
@@ -7,6 +7,7 @@ $accentColor : #ff541e;
 $accentColor2 : #bc3d14; // Accent color
 $accentColorFilter : rgba(255, 83, 31, 0.8);
 $color6 : #333; // darkest color
+$darkColorFilter : rgba(51,51,51,.5);
 
 
 .accentColorText {
@@ -115,11 +116,19 @@ nav.desktop-slackie a:hover {
 }
 
 nav.mobile-slackie ul li:hover {
-  background-color: rgba(255,255,255,.1);
+  // background-color: rgba(255,255,255,.1);
 
 }
 
-nav.mobile-slackie ul li:hover > a{
+nav.mobile-slackie ul li a {
+  color: $color4;
+  transition: color .15s;
+  -webkit-transition: color .15s;
+  -moz-transition: color .15s;
+  -o-transition: color .15s;
+}
+
+nav.mobile-slackie ul li a:hover{
   color: $accentColor;
 }
 
@@ -162,10 +171,10 @@ nav.desktop-slackie ul li a {
     height: 100%;
     position: relative;
     font-weight: 300;
-    color: #333;
+    color: $color6;
     border-bottom: 2px solid transparent;
     padding: 12px 20px;
-    font-size: 17px !important;
+    font-size: 15px;
     margin-left: 9px;
     /*opacity: .8;*/
     transition: color .2s, border-bottom .2s;
@@ -229,26 +238,24 @@ nav.desktop-slackie ul li a:hover {
 nav.desktop-slackie .mobile-nav-trigger.icon {
     float: right;
     box-sizing: content-box;
-    /*margin: 0 40px;*/
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
-    color: #333;
+    color: $color6;
     -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
     padding: 10px 14px 9px;
     vertical-align: bottom;
     border-radius: 4px;
-    /*background: #3369E8;*/
     white-space: nowrap;
     position: relative;
     line-height: 1 !important;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 100%;
-    /*font-size: 5px;*/
     max-width: 30px;
     margin-left: 1px;
-    /*box-shadow: 0px 2px 0px #3369E8;*/
     margin: 30px 30px 20px 0;
     margin-left: 9px;
     font-size: 22px;
@@ -280,6 +287,8 @@ nav.desktop-slackie .mobile-nav-trigger.text {
     text-decoration: none;
     color: #fafafa;
     -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
     padding: 10px 14px 9px;
     vertical-align: bottom;
     border-radius: 4px;
@@ -297,7 +306,7 @@ nav.desktop-slackie .mobile-nav-trigger.text {
     font-weight: 900;
     margin: 17px 5px 20px 0;
     margin-left: 9px;
-    font-size: 12pt;
+    font-size: 18px;
 }
 
 nav.desktop-slackie .mobile-nav-trigger.text:hover {
@@ -317,7 +326,7 @@ nav.desktop-slackie .mobile-nav-trigger.text:before {
 
 nav.mobile-slackie {
     display: none;
-    background: #333;
+    background: $color6;
     position: fixed;
     opacity: 1;
     top: 0;
@@ -326,15 +335,19 @@ nav.mobile-slackie {
     height: 100%;
     z-index: 999;
     -webkit-animation: mobile;
+    -moz-animation: mobile;
+    -o-animation: mobile;
     animation: mobile;
     -webkit-animation-duration: 0.2s;
+    -moz-animation-duration: 0.2s;
+    -o-animation-duration: 0.2s;
     animation-duration: 0.2s;
     font-family: "Lato", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 nav.mobile-slackie a {
     text-decoration: none;
-    color: #333;
+    color: $color6;
 }
 
 nav.mobile-slackie .logo {
@@ -350,7 +363,7 @@ nav.mobile-slackie .logo {
 
 nav.mobile-slackie .close-slackie-mobile {
     margin: 20px 40px 0 0;
-    color: #fafafa;
+    color: $color4;
     -webkit-transform-origin: center center;
     -ms-transform-origin: center center;
     transform-origin: center center;
@@ -363,6 +376,10 @@ nav.mobile-slackie .close-slackie-mobile {
     animation: close;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
+}
+
+nav.mobile-slackie .close-slackie-mobile:hover {
+  color: $accentColor;
 }
 
 nav.mobile-slackie ul {
@@ -398,7 +415,7 @@ nav.mobile-slackie ul li a {
     text-align: center;
     font-size: 25px !important;
     line-height: 70px;
-    color: #fff;
+    color: $color4;
     -webkit-animation: mobilein;
     animation: mobilein;
     -webkit-animation-delay: -1s;
@@ -1716,8 +1733,7 @@ footer {
     transition: padding .3s, box-shadow .2s;
     -webkit-transition: padding .3s, box-shadow .2s;
     -moz-transition: padding .3s, box-shadow .2s;
-
-    // transition: background-color .2s;
+    -o-transition: padding .3s, box-shadow .2s;
 
     #thirdInner {
       height: 100%;
@@ -1730,7 +1746,6 @@ footer {
         height: 45%;
         min-width: 100%;
         position: relative;
-        // display: inline-block;
         overflow: hidden;
 
         img {
@@ -1740,7 +1755,6 @@ footer {
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          // z-index: 0;
         }
       }
 
@@ -1800,30 +1814,67 @@ footer {
   }
 
   .third:hover {
-    cursor:  pointer;
-    // padding: 5px;
-    // background-color: $accentColorFilter;
-    // color: $accentColor2;
     border-radius: 2px;
     box-shadow: 0 20px 72px -10px rgba(0, 0, 0, 0.25)
   }
 }
 // .recentPosts
 
+.allPostsButton {
+  height: 125px;
+  width: 100%;
+  background-color: $color6;
+  position: relative;
+  border-bottom: 1px solid $accentColor;
+  border-top: 1px solid $accentColor;
+
+  a {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transition: background-color .4s;
+    -webkit-transition: background-color .4s;
+    -moz-transition: background-color .4s;
+    -o-transition: background-color .4s;
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $accentColor;
+      font-size: 20px;
+      transition: color .2s, font-size .2s;
+      -webkit-transition: color .2s, font-size .2s;
+      -moz-transition: color .2s, font-size .2s;
+      -o-transition: color .2s, font-size .2s;
+
+    }
+
+
+  }
+
+  a:hover {
+    background-color: $accentColor;
+  }
+  a:hover > span {
+    color: $color2;
+    font-size: 25px;
+  }
+}
+
 .blogWall {
   min-height: 600px;
   height: 100%;
   position: relative;
   padding: 0;
-  border-top: 1px solid $color3;
   display: table;
 
   .blogMain {
-    // min-height: 600px;
     background-color: $color1;
     height: 100%;
     display: block;
-    // border-right: 1px solid $accentColor2;
     padding: 20px 30px 40px 30px;
     border-bottom: 1px solid $color3;
 
@@ -1864,6 +1915,7 @@ footer {
           transition: color .1s;
           -webkit-transition: color .1s;
           -moz-transition: color .1s;
+          -o-transition: color .1s;
 
           // text-align: center;
 
@@ -1879,6 +1931,24 @@ footer {
           text-align: center;
           color: $color5;
         }
+    }
+
+    button.accentButton {
+      background-color: $accentColor;
+      padding: 10px;
+      margin-top: 10px;
+      border: 3px solid $accentColor2;
+      color: $color3;
+      font-weight: 400;
+      transition: color .2s;
+      -webkit-transition: color .2s;
+      -moz-transition: color .2s;
+      -o-transition: color .2s;
+    }
+
+    button.accentButton:hover {
+      box-shadow: 0 20px 72px -10px rgba(0, 0, 0, 0.25);
+      color: $color1;
     }
   }
 
@@ -1939,6 +2009,7 @@ footer {
         text-align: center;
         -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
         -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        -o-box-sizing: border-box;    /* Opera */
         box-sizing: border-box;
       }
     }
