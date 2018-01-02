@@ -1710,9 +1710,6 @@ footer {
           width: 100%;
           padding: 10px;
         }
-        a img:hover {
-          padding: 5px;
-        }
       }
   }
 }
@@ -1818,15 +1815,15 @@ footer {
     box-shadow: 0 20px 72px -10px rgba(0, 0, 0, 0.25)
   }
 }
-// .recentPosts
 
 .allPostsButton {
   height: 125px;
   width: 100%;
   background-color: $color6;
   position: relative;
-  border-bottom: 1px solid $accentColor;
-  border-top: 1px solid $accentColor;
+  // border-bottom: 1px solid $color4;
+  // border-top: 1px solid $color4;
+  // margin-bottom: 20px;
 
   a {
     display: block;
@@ -1935,7 +1932,7 @@ footer {
 
     button.accentButton {
       background-color: $accentColor;
-      padding: 10px;
+      padding: 10px 60px;
       margin-top: 10px;
       border: 3px solid $accentColor2;
       color: $color3;
@@ -1960,7 +1957,7 @@ footer {
     bottom: 0;
     right: 0;
     text-align: center;
-    background-color: $color6;
+    background-color: $color1;
 
     .otherCategories {
 
@@ -1971,10 +1968,10 @@ footer {
 
       li {
         text-align: left;
-        color: $color4;
+        color: $color5;
 
         a {
-          color: $color4;
+          color: $color5;
         }
       }
     }
@@ -1991,7 +1988,7 @@ footer {
       }
 
       label {
-        color: $color4;
+        color: $color5;
       }
 
       button {
