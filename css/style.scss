@@ -471,9 +471,9 @@ nav.mobile-slackie .slackie-action-btn i {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 767px) {
   div.headerTop {
-    height: auto;
+    min-height: 75px;
     text-align: center;
 
     .socialIcons {
@@ -486,6 +486,10 @@ nav.mobile-slackie .slackie-action-btn i {
       text-align: center;
     }
   }
+
+  // .headerPlaceholder {
+  //   height: 125px;
+  // }
 }
 
 .mobile-slackie:target {
@@ -556,11 +560,11 @@ nav.mobile-slackie .slackie-action-btn i {
 
   .carousel-indicators li {
     border: 1px solid $accentColor;
-
   }
 
   .carousel-indicators .active {
     background-color: $accentColor;
+    height: 10px;
   }
 
   #carousel-example-generic {
@@ -568,15 +572,24 @@ nav.mobile-slackie .slackie-action-btn i {
     width: 100%;
     overflow: hidden;
 
+    ol li {
+      height: 10px;
+      width: 10px;
+      // margin: 3px;
+    }
+
 
     .carousel-inner {
       position: relative;
+      height: 500px;
 
       .item {
         height: 500px;
+        // min-height: 100%;
 
 
         img {
+          // height: 500px;
           width: 100%;
           position: absolute;
           bottom: 0;
@@ -588,9 +601,6 @@ nav.mobile-slackie .slackie-action-btn i {
           width: 100%;
           top: 0;
           left: 0;
-          // left: 40px;
-          // padding: 20px;
-          // padding-left: 40px;
 
           .captionBox {
 
@@ -2016,3 +2026,212 @@ footer {
 
 
 //
+// RESPONSIVE DESIGN SECTION
+
+@media (max-width: 768px) {
+  // HOMEPAGE
+  // ---------------------------------------------------------------------------
+  // SECTION 1 CAROUSEL
+  .carousel-inner>.item>img {
+    // height: 400px;
+    // width: auto;
+    max-width: none;
+    min-width: 100%;
+  }
+  #headBanner {
+    height: 400px;
+    width: 100%;
+    padding: 0;
+    position: relative;
+
+    .carousel-indicators li {
+      border: 1px solid $accentColor;
+    }
+    //
+    .carousel-indicators .active {
+      background-color: $accentColor;
+    }
+    //
+    #carousel-example-generic {
+      height: 400px;
+      width: 100%;
+      // overflow: hidden;
+    //
+    ol li {
+      height: 15px;
+      width: 15px;
+      margin: 4px;
+    }
+    //
+      .carousel-inner {
+        position: relative;
+        height: 400px;
+        width: 100%;
+
+        .item {
+          height: 400px;
+          overflow: hidden;
+          // width: 100%;
+          // position: relative;
+
+          img {
+            // width: 100%;
+            height: 100%;
+
+            // max-width: none !important;
+            width: auto;
+            // border: 20px solid yellow;
+            // z-index: 20;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          .carousel-caption {
+            height: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+
+            .captionBox {
+              width: 100%;
+              h1 {
+                font-size: 20px;
+                padding: 20px;
+                font-weight: 400;
+                color: $accentColor;
+              }
+
+              p {
+                font-weight: 300;
+                font-size: 13px;
+                line-height: 1.5;
+                color: $color2;
+                letter-spacing: .75px;
+              }
+
+              .buttonDiv {
+                a.accentButton {
+                  border: 2px solid $accentColor;
+                  text-decoration: none;
+                  border-radius: 2px;
+                }
+                a.accentButton:hover {
+                  border: 2px solid $color2;
+                  // background-color: $accentColor2;
+                  padding: 10px;
+                  text-decoration: none;
+                  font-weight: 300;
+                  color: $color2;
+
+                }
+              }
+            }
+
+            .right,
+            .middle,
+            .left {
+              padding: 0;
+              position: absolute;
+              top: 40%;
+              left: 50%;
+              width: 60%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+
+      }
+    //
+    }
+
+  }
+
+  // ---------------------------------------------------------------------------
+  // SECTION 2 CARDS
+  .sectionFullHeader {
+    height: 540px;
+    padding: 15px;
+
+  }
+
+  .one {
+    background-color: $color3;
+
+    .quietHeadline {
+      color: $color4;
+      font-size: 22px;
+    }
+
+    .loudHeadline {
+      color: $color5;
+      font-size: 25px;
+    }
+  }
+
+  .cardRow {
+    margin-top: 10px;
+    height: 300px;
+
+    .cardOuter {
+      padding: 10px;
+
+      .cardContents {
+        position: relative;
+        overflow: hidden;
+        height: 300px;
+        width: 100%;
+
+
+        .cardFront, .cardBack {
+          cursor: pointer;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          transition: transform 0.5s;
+          -webkit-transition: -webkit-transform 0.5s;
+          -moz-transition: -moz-transform .3s;
+
+          .inner {
+
+            h2 {
+              margin-top: 15px;
+              font-size: 25px;
+            }
+
+            h2 i {
+              font-size: 150%;
+              color: $accentColor;
+            }
+
+            p {
+              margin-top: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .buttonDiv {
+    margin-top: 40px;
+
+      a.accentButton {
+        width: 50%;
+        margin-left: 25%;]
+      }
+  }
+  // ---------------------------------------------------------------------------
+  // SECTION 3 WE LIVE FOR THIS
+
+  // ---------------------------------------------------------------------------
+  // SECTION 4 OUR CLIENTS TESTIMONIALS
+
+  // ---------------------------------------------------------------------------
+  // SECTION 5 OUR HARD EARNED EXPERIENCE
+}
